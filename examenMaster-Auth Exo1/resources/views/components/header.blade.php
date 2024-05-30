@@ -6,19 +6,19 @@
                 <div class="navbar-brand-box horizontal-logo">
                     <a href="index.html" class="logo logo-dark">
                         <span class="logo-sm">
-                            <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">M</span></h3>
+                            <h3  class="mt-4"><span class="text-primary">P</span><span class="text-danger">V</span></h3>
                         </span>
                         <span class="logo-lg">
-                            <h3  class="mt-4"><span class="text-primary">E</span>XAMEN <span class="text-danger">M</span>ASTER</h3>
+                            <h3  class="mt-4"><span class="text-primary">P</span>rime <span class="text-danger">V</span>Vidéeo</h3>
                         </span>
                     </a>
 
                     <a href="index.html" class="logo logo-light">
                         <span class="logo-sm">
-                            <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">M</span></h3>
+                            <h3  class="mt-4"><span class="text-primary">P</span><span class="text-danger">V</span></h3>
                         </span>
                         <span class="logo-lg">
-                            <h3  class="mt-4"><span class="text-primary">E</span>XAMEN <span class="text-danger">M</span>ASTER</h3>
+                            <h3  class="mt-4"><span class="text-primary">P</span>rime <span class="text-danger">V</span>Vidéeo</h3>
                         </span>
                     </a>
                 </div>

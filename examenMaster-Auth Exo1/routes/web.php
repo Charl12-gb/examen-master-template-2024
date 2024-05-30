@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,20 +20,13 @@ use App\Http\Controllers\OrderController;
 //     return view('layout.index');
 // })->name('home');
 
-Route::get('/', [AuthController::class, 'index'])->name('login-index');
+Route::get('/login', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/form-user', [AuthController::class, 'add'])->name('register-form');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/form-user', [AuthController::class, 'add'])->name('register-form');
-    Route::get('/users', [AuthController::class, 'users'])->name('users');
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
-
-    Route::get('/form-menu', [MenuController::class, 'add'])->name('menu-form');
-    Route::get('/menus', [MenuController::class, 'menus'])->name('menus');
-    Route::post('/store-menu', [MenuController::class, 'store'])->name('store-menu');
-
-
-    Route::get('/home', [OrderController::class,'index'])->name('home');
-    Route::get('/add', [OrderController::class,'add'])->name('add');
-    Route::post('/store', [OrderController::class,'store'])->name('store');
+    Route::get('/', [MediaController::class, 'medias'])->name('home');
+    Route::get('/form-media', [MediaController::class, 'add'])->name('media-form');
+    Route::post('/store-media', [MediaController::class, 'store'])->name('store-media');
 });

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ModelController;
+use App\Http\Controllers\MyModelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('layout.index');
 // })->name('home');
 
-Route::get('/', [ModelController::class,'index'])->name('home');
-Route::get('/add', [ModelController::class,'add'])->name('add');
-Route::post('/store', [ModelController::class,'store'])->name('store');
+Route::get('/', [MyModelController::class,'index'])->name('home');
+Route::get('/add', [MyModelController::class,'add'])->name('add');
+Route::post('/store', [MyModelController::class,'store'])->name('store');
+Route::get('/show/{id}', [MyModelController::class,'show'])->name('show');
+Route::delete('/destroy/{id}', [MyModelController::class,'destroy'])->name('destroy');
+Route::get('/edit/{id}', [MyModelController::class,'edit'])->name('edit');
+Route::post('/update/{id}', [MyModelController::class,'update'])->name('update');

@@ -13,10 +13,10 @@
         <!-- Light Logo-->
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">M</span></h3>
+                <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">W</span></h3>
             </span>
             <span class="logo-lg">
-                <h3  class="mt-4"><span class="text-primary">E</span>XAMEN <span class="text-danger">M</span>ASTER</h3>
+                <h3  class="mt-4"><span class="text-primary">E</span>xpert<span class="text-danger">W</span>eb</h3>
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -33,13 +33,18 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('home') }}">
-                        <i data-feather="list" class="icon-dual"></i> <span data-key="t-widgets">Liste</span>
+                    <a class="nav-link menu-link" href="{{ route('add') }}">
+                        <i data-feather="plus" class="icon-dual"></i> <span data-key="t-widgets">Création mission</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('add') }}">
-                        <i data-feather="plus" class="icon-dual"></i> <span data-key="t-widgets">Ajouter</span>
+                    <a class="nav-link menu-link" href="{{ route('home') }}">
+                        <i data-feather="list" class="icon-dual"></i> <span data-key="t-widgets">Mes Missions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-link" href="{{ route('competences') }}">
+                        <i data-feather="list" class="icon-dual"></i> <span data-key="t-widgets">Competences</span>
                     </a>
                 </li>
             </ul>

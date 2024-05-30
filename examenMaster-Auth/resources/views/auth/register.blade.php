@@ -40,7 +40,7 @@
                                     <p class="text-muted">Inscrivez vous maintenant.</p>
                                 </div>
                                 <div class="p-2 mt-4">
-                                    <form action="{{ route('register') }}">
+                                    <form action="{{ route('register') }}" method="POST">
                                         @csrf
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Nom & Prénoms <span class="text-danger">*</span></label>

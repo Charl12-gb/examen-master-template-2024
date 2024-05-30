@@ -4,19 +4,19 @@
         <!-- Dark Logo-->
         <a href="index.html" class="logo logo-dark">
             <span class="logo-sm">
-                <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">M</span></h3>
+                <h3  class="mt-4"><span class="text-primary">P</span><span class="text-danger">V</span></h3>
             </span>
             <span class="logo-lg">
-                <h3  class="mt-4"><span class="text-primary">E</span>XAMEN <span class="text-danger">M</span>ASTER</h3>
+                <h3  class="mt-4"><span class="text-primary">P</span>rime <span class="text-danger">V</span>idéo</h3>
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <h3  class="mt-4"><span class="text-primary">E</span><span class="text-danger">M</span></h3>
+                <h3  class="mt-4"><span class="text-primary">P</span><span class="text-danger">V</span></h3>
             </span>
             <span class="logo-lg">
-                <h3  class="mt-4"><span class="text-primary">E</span>XAMEN <span class="text-danger">M</span>ASTER</h3>
+                <h3  class="mt-4"><span class="text-primary">P</span>rime <span class="text-danger">V</span>idéo</h3>
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
@@ -34,17 +34,12 @@
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="{{ route('home') }}">
-                        <i data-feather="list" class="icon-dual"></i> <span data-key="t-widgets">Commandes</span>
+                        <i data-feather="list" class="icon-dual"></i> <span data-key="t-widgets">Médias</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('users') }}">
-                        <i data-feather="user" class="icon-dual"></i> <span data-key="t-widgets">Utilisateurs</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('menus') }}">
-                        <i data-feather="task" class="icon-dual"></i> <span data-key="t-widgets">Menus</span>
+                    <a class="nav-link menu-link" href="{{ route('media-form') }}">
+                        <i data-feather="plus" class="icon-dual"></i> <span data-key="t-widgets">Ajouter une vidéo</span>
                     </a>
                 </li>
             </ul>

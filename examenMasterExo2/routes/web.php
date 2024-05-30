@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\MissionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MissionController;
+use App\Http\Controllers\CompetenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MissionController::class,'index'])->name('home');
 Route::get('/add', [MissionController::class,'add'])->name('add');
 Route::post('/store', [MissionController::class,'store'])->name('store');
+
+Route::get('/form-competence', [CompetenceController::class, 'add'])->name('competence-form');
+Route::get('/competences', [CompetenceController::class, 'competences'])->name('competences');
+Route::post('/store-competence', [CompetenceController::class, 'store'])->name('store-competence');

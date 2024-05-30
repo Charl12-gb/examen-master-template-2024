@@ -39,7 +39,7 @@ class AuthController extends Controller
     }
 
     public function add(){
-        return view('layout.add-user');
+        return view('auth.register');
     }
 
     public function register(Request $request){
@@ -47,6 +47,7 @@ class AuthController extends Controller
             'email' => 'required|email',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
+            'password' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -57,9 +58,9 @@ class AuthController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => Hash::make('password')
+            'password' => Hash::make($request->password)
         ]);
-        return redirect()->route('users')->with(['success' => true, 'msg' => "Inscription effectuée avec succès."]);
+        return redirect()->route('login')->with(['success' => true, 'msg' => "Inscription effectuée avec succès. Vous pouvez vous connecter."]);
     }
 
     public function updateUser(Request $request, $id){

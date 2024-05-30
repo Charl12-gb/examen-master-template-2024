@@ -21,7 +21,7 @@
                                                 <div class="col-auto">
                                                     <a href="{{ route('add') }}" type="button" class="btn btn-soft-primary"><i
                                                             class="ri-add-circle-line align-middle me-1"></i>
-                                                        Add Product</a>
+                                                        Ajouter une mission</a>
                                                 </div>
                                             </div>
                                         </form>

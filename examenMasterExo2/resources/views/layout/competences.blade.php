@@ -33,15 +33,15 @@
                             <div class="col-12">
                                 <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                     <div class="flex-grow-1">
-                                        <h4 class="fs-16 mb-1">Liste des utilisateurs</h4>
+                                        <h4 class="fs-16 mb-1">Liste des compétences</h4>
                                     </div>
                                     <div class="mt-3 mt-lg-0">
                                         <form action="javascript:void(0);">
                                             <div class="row g-3 mb-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <a href="{{ route('menu-form') }}" type="button" class="btn btn-soft-primary"><i
+                                                    <a href="{{ route('competence-form') }}" type="button" class="btn btn-soft-primary"><i
                                                             class="ri-add-circle-line align-middle me-1"></i>
-                                                        Ajouter un menu</a>
+                                                        Ajouter une compétence</a>
                                                 </div>
                                             </div>
                                         </form>
@@ -59,18 +59,13 @@
                                                 <tr>
                                                     <th>No.</th>
                                                     <th>Nom</th>
-                                                    <th>Prénoms</th>
-                                                    <th>Email</th>
-                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($menus as $menu)
+                                                @foreach($competences as $competence)
                                                     <tr>
                                                         <td> # {{ $loop->iteration }}</td>
-                                                        <td>{{ $menu->name }}</td>
-                                                        <td>{{ $menu->type }}</td>
-                                                        <td>{{ $menu->price }} CFA</td>
+                                                        <td>{{ $competence->name }}</td>
                                                         <td>
                                                             <i class="ri-pencil-fill align-bottom me-2 text-muted"></i>
                                                         </td>

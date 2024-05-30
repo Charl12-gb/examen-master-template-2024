@@ -40,12 +40,17 @@
                                     <p class="text-muted">Inscrivez vous maintenant.</p>
                                 </div>
                                 <div class="p-2 mt-4">
-                                    <form action="{{ route('register') }}">
+                                    <form action="{{ route('register') }}" method="POST">
                                         @csrf
                                         <div class="mb-3">
-                                            <label for="name" class="form-label">Nom & Prénoms <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" id="name" placeholder="Entrez votre nom" name="name" required>
-                                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                                            <label for="last_name" class="form-label">Nom <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="last_name" placeholder="Entrez votre nom" name="last_name" required>
+                                            <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="first_name" class="form-label">Prénoms <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="first_name" placeholder="Entrez votre prénoms" name="first_name" required>
+                                            <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
                                         </div>
                                         <div class="mb-3">
                                             <label for="useremail" class="form-label">Email <span class="text-danger">*</span></label>
@@ -82,7 +87,7 @@
                         <!-- end card -->
 
                         <div class="mt-4 text-center">
-                            <p class="mb-0">J'ai déjà un compte <a href="{{ route('login-index') }}" class="fw-semibold text-primary text-decoration-underline"> Se connecter </a> </p>
+                            <p class="mb-0">J'ai déjà un compte <a href="{{ route('login') }}" class="fw-semibold text-primary text-decoration-underline"> Se connecter </a> </p>
                         </div>
 
                     </div>

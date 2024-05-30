@@ -21,8 +21,6 @@
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="{{ asset('assets/css/custom.min.css') }}" rel="stylesheet" type="text/css" />
-
-
 </head>
 
 <body>
@@ -39,6 +37,28 @@
                                     <h5 class="text-primary">Connexion</h5>
                                     <p class="text-muted">Connectez à votre compte.</p>
                                 </div>
+                                @if (session('success'))
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <div class="alert-icon">
+                                    <i class="far fa-fw fa-bell"></i>
+                                </div>
+                                <div class="alert-message">
+                                    {{ session('msg') }}
+                                </div>
+                            </div>
+                            @endif
+                            @if (session('error'))
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <div class="alert-icon">
+                                    <i class="far fa-fw fa-bell"></i>
+                                </div>
+                                <div class="alert-message">
+                                    {{ session('msg') }}
+                                </div>
+                            </div>
+                        @endif
                                 <div class="p-2 mt-4">
                                     <form action="{{ route('login') }}" method="POST">
                                         @csrf
